@@ -10,21 +10,25 @@
 		20F12BA0D04C5A069C837760 /* Pods_DwitBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
-		44A9D6F228055D6C0086C1FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6F128055D6C0086C1FE /* ViewController.swift */; };
 		44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F328055D6C0086C1FE /* Main.storyboard */; };
 		44A9D6F728055D6C0086C1FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F628055D6C0086C1FE /* Assets.xcassets */; };
 		44A9D6FA28055D6C0086C1FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F828055D6C0086C1FE /* LaunchScreen.storyboard */; };
+		44A9D70E2805A4570086C1FE /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D70D2805A4570086C1FE /* Search.storyboard */; };
+		44A9D7102805A4640086C1FE /* BookReview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D70F2805A4640086C1FE /* BookReview.storyboard */; };
+		44A9D7122805A46D0086C1FE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D7112805A46D0086C1FE /* MyPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44A9D6F128055D6C0086C1FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44A9D6F428055D6C0086C1FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44A9D6F628055D6C0086C1FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A9D6F928055D6C0086C1FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44A9D6FB28055D6C0086C1FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44A9D70D2805A4570086C1FE /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		44A9D70F2805A4640086C1FE /* BookReview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookReview.storyboard; sourceTree = "<group>"; };
+		44A9D7112805A46D0086C1FE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.release.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.release.xcconfig"; sourceTree = "<group>"; };
 		B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.debug.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.debug.xcconfig"; sourceTree = "<group>"; };
 		D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DwitBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,13 +77,111 @@
 			children = (
 				44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */,
 				44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */,
-				44A9D6F128055D6C0086C1FE /* ViewController.swift */,
+				44A9D6F828055D6C0086C1FE /* LaunchScreen.storyboard */,
 				44A9D6F328055D6C0086C1FE /* Main.storyboard */,
 				44A9D6F628055D6C0086C1FE /* Assets.xcassets */,
-				44A9D6F828055D6C0086C1FE /* LaunchScreen.storyboard */,
 				44A9D6FB28055D6C0086C1FE /* Info.plist */,
+				44A9D7012805A3B90086C1FE /* Search */,
+				44A9D7032805A3DB0086C1FE /* BookReview */,
+				44A9D7022805A3D10086C1FE /* MyPage */,
 			);
 			path = DwitBook;
+			sourceTree = "<group>";
+		};
+		44A9D7012805A3B90086C1FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7062805A3FB0086C1FE /* Model */,
+				44A9D7052805A3F60086C1FE /* View */,
+				44A9D7042805A3EE0086C1FE /* ViewModel */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		44A9D7022805A3D10086C1FE /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D70C2805A4260086C1FE /* Model */,
+				44A9D70B2805A4210086C1FE /* View */,
+				44A9D70A2805A41C0086C1FE /* ViewModel */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		44A9D7032805A3DB0086C1FE /* BookReview */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7092805A4100086C1FE /* Model */,
+				44A9D7082805A40C0086C1FE /* View */,
+				44A9D7072805A4070086C1FE /* ViewModel */,
+			);
+			path = BookReview;
+			sourceTree = "<group>";
+		};
+		44A9D7042805A3EE0086C1FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44A9D7052805A3F60086C1FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D70D2805A4570086C1FE /* Search.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44A9D7062805A3FB0086C1FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44A9D7072805A4070086C1FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44A9D7082805A40C0086C1FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D70F2805A4640086C1FE /* BookReview.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44A9D7092805A4100086C1FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44A9D70A2805A41C0086C1FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44A9D70B2805A4210086C1FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7112805A46D0086C1FE /* MyPage.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44A9D70C2805A4260086C1FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F71A50426C795FD4CF84095D /* Pods */ = {
@@ -88,7 +190,6 @@
 				B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */,
 				49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,8 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A9D7102805A4640086C1FE /* BookReview.storyboard in Resources */,
+				44A9D7122805A46D0086C1FE /* MyPage.storyboard in Resources */,
 				44A9D6FA28055D6C0086C1FE /* LaunchScreen.storyboard in Resources */,
 				44A9D6F728055D6C0086C1FE /* Assets.xcassets in Resources */,
+				44A9D70E2805A4570086C1FE /* Search.storyboard in Resources */,
 				44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44A9D6F228055D6C0086C1FE /* ViewController.swift in Sources */,
 				44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */,
 				44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */,
 			);
