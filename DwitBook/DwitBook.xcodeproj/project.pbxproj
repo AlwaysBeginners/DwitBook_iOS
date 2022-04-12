@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F12BA0D04C5A069C837760 /* Pods_DwitBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
 		44A9D6F228055D6C0086C1FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6F128055D6C0086C1FE /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		44A9D6F628055D6C0086C1FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A9D6F928055D6C0086C1FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44A9D6FB28055D6C0086C1FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.release.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.release.xcconfig"; sourceTree = "<group>"; };
+		B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.debug.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.debug.xcconfig"; sourceTree = "<group>"; };
+		D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DwitBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F12BA0D04C5A069C837760 /* Pods_DwitBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02585926A06A54BFEB80FC9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44A9D6E128055D6C0086C1FE = {
 			isa = PBXGroup;
 			children = (
 				44A9D6EC28055D6C0086C1FE /* DwitBook */,
 				44A9D6EB28055D6C0086C1FE /* Products */,
+				F71A50426C795FD4CF84095D /* Pods */,
+				02585926A06A54BFEB80FC9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = DwitBook;
 			sourceTree = "<group>";
 		};
+		F71A50426C795FD4CF84095D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */,
+				49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44A9D6FE28055D6C0086C1FE /* Build configuration list for PBXNativeTarget "DwitBook" */;
 			buildPhases = (
+				5F6D4B5D7E922F6A7B790D78 /* [CP] Check Pods Manifest.lock */,
 				44A9D6E628055D6C0086C1FE /* Sources */,
 				44A9D6E728055D6C0086C1FE /* Frameworks */,
 				44A9D6E828055D6C0086C1FE /* Resources */,
+				8F5AE63E7AC22CDBAB88B33C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F6D4B5D7E922F6A7B790D78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DwitBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F5AE63E7AC22CDBAB88B33C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44A9D6E628055D6C0086C1FE /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		44A9D6FF28055D6C0086C1FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		44A9D70028055D6C0086C1FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
