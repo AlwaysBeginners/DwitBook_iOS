@@ -18,6 +18,13 @@
 		44A9D7122805A46D0086C1FE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D7112805A46D0086C1FE /* MyPage.storyboard */; };
 		44A9D7162805B1900086C1FE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D7152805B1900086C1FE /* Book.swift */; };
 		44A9D7182805B1E10086C1FE /* search-home-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D7172805B1E10086C1FE /* search-home-animation.json */; };
+		44A9D71E2805BAEA0086C1FE /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D71D2805BAEA0086C1FE /* SearchHomeViewController.swift */; };
+		44A9D7202805BC530086C1FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D71F2805BC530086C1FE /* SearchViewController.swift */; };
+		44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D7242806016C0086C1FE /* SuggestionCell.swift */; };
+		44A9D7272806016C0086C1FE /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D7252806016C0086C1FE /* SuggestionCell.xib */; };
+		44A9D7292806029E0086C1FE /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D7282806029E0086C1FE /* Search.swift */; };
+		44A9D72D2806036E0086C1FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D72C2806036E0086C1FE /* SearchViewModel.swift */; };
+		44A9D7302806043B0086C1FE /* suggestionSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D72F2806043B0086C1FE /* suggestionSampleData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,13 @@
 		44A9D7112805A46D0086C1FE /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		44A9D7152805B1900086C1FE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		44A9D7172805B1E10086C1FE /* search-home-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "search-home-animation.json"; sourceTree = "<group>"; };
+		44A9D71D2805BAEA0086C1FE /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
+		44A9D71F2805BC530086C1FE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		44A9D7242806016C0086C1FE /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		44A9D7252806016C0086C1FE /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
+		44A9D7282806029E0086C1FE /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		44A9D72C2806036E0086C1FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		44A9D72F2806043B0086C1FE /* suggestionSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = suggestionSampleData.json; sourceTree = "<group>"; };
 		49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.release.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.release.xcconfig"; sourceTree = "<group>"; };
 		B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.debug.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.debug.xcconfig"; sourceTree = "<group>"; };
 		D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DwitBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +140,7 @@
 		44A9D7042805A3EE0086C1FE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				44A9D72C2806036E0086C1FE /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,7 +148,10 @@
 		44A9D7052805A3F60086C1FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44A9D7232806013B0086C1FE /* CustomCell */,
 				44A9D70D2805A4570086C1FE /* Search.storyboard */,
+				44A9D71D2805BAEA0086C1FE /* SearchHomeViewController.swift */,
+				44A9D71F2805BC530086C1FE /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +159,7 @@
 		44A9D7062805A3FB0086C1FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44A9D7282806029E0086C1FE /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,8 +211,9 @@
 		44A9D7132805B1720086C1FE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				44A9D7172805B1E10086C1FE /* search-home-animation.json */,
 				44A9D7142805B17E0086C1FE /* Model */,
+				44A9D72E2806041D0086C1FE /* SampleData */,
+				44A9D7172805B1E10086C1FE /* search-home-animation.json */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -204,6 +224,23 @@
 				44A9D7152805B1900086C1FE /* Book.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		44A9D7232806013B0086C1FE /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7242806016C0086C1FE /* SuggestionCell.swift */,
+				44A9D7252806016C0086C1FE /* SuggestionCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		44A9D72E2806041D0086C1FE /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D72F2806043B0086C1FE /* suggestionSampleData.json */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		F71A50426C795FD4CF84095D /* Pods */ = {
@@ -278,10 +315,12 @@
 				44A9D7102805A4640086C1FE /* BookReview.storyboard in Resources */,
 				44A9D7122805A46D0086C1FE /* MyPage.storyboard in Resources */,
 				44A9D7182805B1E10086C1FE /* search-home-animation.json in Resources */,
+				44A9D7272806016C0086C1FE /* SuggestionCell.xib in Resources */,
 				44A9D6FA28055D6C0086C1FE /* LaunchScreen.storyboard in Resources */,
 				44A9D6F728055D6C0086C1FE /* Assets.xcassets in Resources */,
 				44A9D70E2805A4570086C1FE /* Search.storyboard in Resources */,
 				44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */,
+				44A9D7302806043B0086C1FE /* suggestionSampleData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +373,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A9D7202805BC530086C1FE /* SearchViewController.swift in Sources */,
 				44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */,
+				44A9D72D2806036E0086C1FE /* SearchViewModel.swift in Sources */,
 				44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */,
+				44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */,
 				44A9D7162805B1900086C1FE /* Book.swift in Sources */,
+				44A9D7292806029E0086C1FE /* Search.swift in Sources */,
+				44A9D71E2805BAEA0086C1FE /* SearchHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,8 +536,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +548,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -521,8 +566,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,7 +578,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

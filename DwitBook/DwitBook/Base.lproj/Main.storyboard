@@ -33,10 +33,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="shK-su-P3V" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6wa-MC-f27">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="LabelColor"/>
                         <color key="selectedImageTintColor" name="LabelColor"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="cTx-ku-Dur" kind="relationship" relationship="viewControllers" id="hlX-vT-bPH"/>
