@@ -8,7 +8,7 @@ target 'DwitBook' do
   # Pods for DwitBook
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
-  pod 'RxAlamofire'
+  pod 'Alamofire', '~> 5.5'
   pod 'lottie-ios'
 
 end

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20F12BA0D04C5A069C837760 /* Pods_DwitBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */; };
+		440A00EC2806FE9200AB824D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00EB2806FE9200AB824D /* ImageLoader.swift */; };
+		440A00EE28070EC100AB824D /* searchResultSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 440A00ED28070EC100AB824D /* searchResultSampleData.json */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
 		44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F328055D6C0086C1FE /* Main.storyboard */; };
@@ -25,9 +26,13 @@
 		44A9D7292806029E0086C1FE /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D7282806029E0086C1FE /* Search.swift */; };
 		44A9D72D2806036E0086C1FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D72C2806036E0086C1FE /* SearchViewModel.swift */; };
 		44A9D7302806043B0086C1FE /* suggestionSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D72F2806043B0086C1FE /* suggestionSampleData.json */; };
+		44A9D73E2806CB4F0086C1FE /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D73C2806CB4F0086C1FE /* SearchResultCell.swift */; };
+		49475813953D6E22B5BA47C1 /* Pods_DwitBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC1768F8F2AFBF44AB68698 /* Pods_DwitBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440A00EB2806FE9200AB824D /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		440A00ED28070EC100AB824D /* searchResultSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = searchResultSampleData.json; sourceTree = "<group>"; };
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +52,10 @@
 		44A9D7282806029E0086C1FE /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		44A9D72C2806036E0086C1FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		44A9D72F2806043B0086C1FE /* suggestionSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = suggestionSampleData.json; sourceTree = "<group>"; };
-		49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.release.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.release.xcconfig"; sourceTree = "<group>"; };
-		B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.debug.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.debug.xcconfig"; sourceTree = "<group>"; };
-		D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DwitBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A9D73C2806CB4F0086C1FE /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		685FF11405554D36AA28C2A1 /* Pods-DwitBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.debug.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.debug.xcconfig"; sourceTree = "<group>"; };
+		BFC1768F8F2AFBF44AB68698 /* Pods_DwitBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DwitBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD71333A6A8DC6B78D43F831 /* Pods-DwitBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DwitBook.release.xcconfig"; path = "Target Support Files/Pods-DwitBook/Pods-DwitBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,19 +63,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20F12BA0D04C5A069C837760 /* Pods_DwitBook.framework in Frameworks */,
+				49475813953D6E22B5BA47C1 /* Pods_DwitBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02585926A06A54BFEB80FC9B /* Frameworks */ = {
+		440A00EA2806FE8500AB824D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D723A50A1A19F31C5F07E060 /* Pods_DwitBook.framework */,
+				440A00EB2806FE9200AB824D /* ImageLoader.swift */,
 			);
-			name = Frameworks;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		44A9D6E128055D6C0086C1FE = {
@@ -78,7 +84,7 @@
 				44A9D6EC28055D6C0086C1FE /* DwitBook */,
 				44A9D6EB28055D6C0086C1FE /* Products */,
 				F71A50426C795FD4CF84095D /* Pods */,
-				02585926A06A54BFEB80FC9B /* Frameworks */,
+				5BF0AE8CC36D3A6DB0A5C914 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +99,7 @@
 		44A9D6EC28055D6C0086C1FE /* DwitBook */ = {
 			isa = PBXGroup;
 			children = (
+				440A00EA2806FE8500AB824D /* Network */,
 				44A9D7342806A52F0086C1FE /* Resource */,
 				44A9D7312806A4EE0086C1FE /* Model */,
 				44A9D7322806A4F30086C1FE /* View */,
@@ -112,6 +119,7 @@
 			children = (
 				44A9D7242806016C0086C1FE /* SuggestionCell.swift */,
 				44A9D7252806016C0086C1FE /* SuggestionCell.xib */,
+				44A9D73C2806CB4F0086C1FE /* SearchResultCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				44A9D72F2806043B0086C1FE /* suggestionSampleData.json */,
+				440A00ED28070EC100AB824D /* searchResultSampleData.json */,
 			);
 			path = SampleData;
 			sourceTree = "<group>";
@@ -187,11 +196,19 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		5BF0AE8CC36D3A6DB0A5C914 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1768F8F2AFBF44AB68698 /* Pods_DwitBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F71A50426C795FD4CF84095D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */,
-				49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */,
+				685FF11405554D36AA28C2A1 /* Pods-DwitBook.debug.xcconfig */,
+				DD71333A6A8DC6B78D43F831 /* Pods-DwitBook.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -203,11 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44A9D6FE28055D6C0086C1FE /* Build configuration list for PBXNativeTarget "DwitBook" */;
 			buildPhases = (
-				5F6D4B5D7E922F6A7B790D78 /* [CP] Check Pods Manifest.lock */,
+				30D5CA828622FABB9BC134AF /* [CP] Check Pods Manifest.lock */,
 				44A9D6E628055D6C0086C1FE /* Sources */,
 				44A9D6E728055D6C0086C1FE /* Frameworks */,
 				44A9D6E828055D6C0086C1FE /* Resources */,
-				8F5AE63E7AC22CDBAB88B33C /* [CP] Embed Pods Frameworks */,
+				01044A755A6037840E515F04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +281,7 @@
 				44A9D6F728055D6C0086C1FE /* Assets.xcassets in Resources */,
 				44A9D70E2805A4570086C1FE /* Search.storyboard in Resources */,
 				44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */,
+				440A00EE28070EC100AB824D /* searchResultSampleData.json in Resources */,
 				44A9D7302806043B0086C1FE /* suggestionSampleData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +289,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F6D4B5D7E922F6A7B790D78 /* [CP] Check Pods Manifest.lock */ = {
+		01044A755A6037840E515F04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30D5CA828622FABB9BC134AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,23 +328,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F5AE63E7AC22CDBAB88B33C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DwitBook/Pods-DwitBook-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,7 +337,9 @@
 			files = (
 				44A9D7202805BC530086C1FE /* SearchViewController.swift in Sources */,
 				44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */,
+				440A00EC2806FE9200AB824D /* ImageLoader.swift in Sources */,
 				44A9D72D2806036E0086C1FE /* SearchViewModel.swift in Sources */,
+				44A9D73E2806CB4F0086C1FE /* SearchResultCell.swift in Sources */,
 				44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */,
 				44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */,
 				44A9D7162805B1900086C1FE /* Book.swift in Sources */,
@@ -468,7 +488,7 @@
 		};
 		44A9D6FF28055D6C0086C1FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B2D83B9759B0A8CA5A0C08 /* Pods-DwitBook.debug.xcconfig */;
+			baseConfigurationReference = 685FF11405554D36AA28C2A1 /* Pods-DwitBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,7 +518,7 @@
 		};
 		44A9D70028055D6C0086C1FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E70CCE478616E0070A8669 /* Pods-DwitBook.release.xcconfig */;
+			baseConfigurationReference = DD71333A6A8DC6B78D43F831 /* Pods-DwitBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

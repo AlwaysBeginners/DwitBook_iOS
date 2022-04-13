@@ -40,10 +40,10 @@ struct Book: Codable {
         case isbn
         case title
         case description
-        case authorName
-        case publisherName
-        case publishedDate
+        case authorName = "author_name"
+        case publisherName = "publisher_name"
+        case publishedDate = "published_date"
         case category
-        case thumbnailUrl
+        case thumbnailUrl = "thumbnail_url"
     }
 }
