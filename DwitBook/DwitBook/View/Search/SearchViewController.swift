@@ -15,11 +15,11 @@ class SearchViewController: UIViewController {
     var suggestionTableView = UITableView()
     
     var isInitial: Bool!
-    var passedText: String?
+    var passedQuery: String?
     var timer: Timer?
     
     var suggestionList = BehaviorSubject<[String]>(value: [])
-//    var searchResultList = BehaviorSubject<[String]>(value: [])
+    var searchResultList = BehaviorSubject<[Book]>(value: [])
     
     let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
@@ -39,34 +39,102 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if isInitial {
+            searchTextField.becomeFirstResponder()
             resultView.isHidden = true
         } else {
-            searchTextField.text = passedText
-            // Search Request
+            searchTextField.text = passedQuery
+            searchAction()
         }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        suggestionTableView.isHidden = true
     }
     
     private func setDelegate() {
         searchTextField.delegate = self
+        resultCollectionView.delegate = self
     }
     
-    private func searchAction(query: String) {
+    private func pushSearchVC(query: String) {
         
         let storyboard = UIStoryboard(name: "Search", bundle: nil)
         let searchVC = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         
         searchVC.isInitial = false
-        searchVC.passedText = query
+        searchVC.passedQuery = query
+        
+        suggestionTableView.isHidden = true
         
         self.navigationController?.pushViewController(searchVC, animated: false)
     }
     
+    @IBAction func backButtonClicked(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func filterButtonClicked(_ sender: UIButton) {
+        // parameter 바꿔서 다시 요청
+        
+        sender.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.2)
+        
+        switch sender.tag {
+            
+        case 0:
+            filterButtons[1].backgroundColor = .white
+            break
+        case 1:
+            filterButtons[0].backgroundColor = .white
+            break
+        default:
+            return
+            
+        }
+    }
+    
+}
+
+// Result CollectionView feature
+extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    private func searchAction() {
+        guard let query = passedQuery else {return}
+        searchResultList.onNext(viewModel.searchResultList(query: query))
+        setResultCollectionView()
+    }
+    
+    private func setResultCollectionView() {
+        resultCollectionView.dataSource = nil
+        
+        // collection view datasource
+        _ = searchResultList.bind(to: resultCollectionView.rx.items(cellIdentifier: "SearchResultCell", cellType: SearchResultCell.self)) { index, element, cell in
+            
+            cell.bind(item: element)
+            
+        }
+        .disposed(by: disposeBag)
+        
+        // cell selection event
+        _ = resultCollectionView.rx.modelSelected(Book.self)
+            .subscribe(onNext: { [weak self] book in
+                // push book review page
+                //self?.pushReviewVC(bookId: Int)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    // cell size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width * 0.45
+        let height = width * 1.8
+        return CGSize(width: width, height: height)
+    }
+    
+    // collectionView inset
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+}
+
+// Suggestion TableView feature
+extension SearchViewController {
     private func addSuggestionTableView() {
         view.addSubview(suggestionTableView)
         
@@ -96,29 +164,13 @@ class SearchViewController: UIViewController {
                 cell.bind(text: element)
             }
             .disposed(by: disposeBag)
-    }
-    
-    @IBAction func backButtonClicked(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func filterButtonClicked(_ sender: UIButton) {
-        // parameter 바꿔서 다시 요청
         
-        sender.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.2)
-        
-        switch sender.tag {
-            
-        case 0:
-            filterButtons[1].backgroundColor = .white
-            break
-        case 1:
-            filterButtons[0].backgroundColor = .white
-            break
-        default:
-            return
-            
-        }
+        // cell selection event
+        _ = suggestionTableView.rx.modelSelected(String.self)
+            .subscribe(onNext: { [weak self] query in
+                self?.pushSearchVC(query: query)
+            })
+            .disposed(by: disposeBag)
     }
     
 }
@@ -135,7 +187,7 @@ extension SearchViewController: UITextFieldDelegate {
         
         guard let query = searchTextField.text else {return false}
         
-        searchAction(query: query)
+        pushSearchVC(query: query)
         
         return true
     }

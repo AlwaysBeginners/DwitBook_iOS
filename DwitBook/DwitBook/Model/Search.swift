@@ -11,6 +11,11 @@ struct SearchResponse: NetworkResponse, Codable {
     var statusCode: Int
     var resultList: [Book]
     
+    enum CodingKeys: String, CodingKey {
+        case statusCode = "status"
+        case resultList = "items"
+    }
+    
     static let EMPTY = SearchResponse(statusCode: 0, resultList: [])
 }
 

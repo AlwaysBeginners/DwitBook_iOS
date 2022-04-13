@@ -9,10 +9,20 @@ class SearchViewModel {
     private var suggestionResponse = SuggestionResponse.EMPTY
     
     func suggestionList(query: String) -> [String] {
+        let response: SuggestionResponse = getSampleData(filename: "suggestionSampleData")
+        return response.suggestionList
+    }
+    
+    func searchResultList(query: String) -> [Book] {
+        let response: SearchResponse = getSampleData(filename: "searchResultSampleData")
+        return response.resultList
+    }
+    
+    func getSampleData<T: Codable>(filename: String) -> T {
         let data: Data
         
-        guard let url = Bundle.main.url(forResource: "suggestionSampleData", withExtension: "json") else {
-            fatalError("Can't find URL")
+        guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
+            fatalError("Can't find URL filename")
         }
         
         do {
@@ -22,11 +32,9 @@ class SearchViewModel {
         }
         
         do {
-            return try JSONDecoder().decode(SuggestionResponse.self, from: data).suggestionList
+            return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            fatalError("Can't decode data")
+            fatalError("Can't decode data \(error)")
         }
     }
-    
-    
 }

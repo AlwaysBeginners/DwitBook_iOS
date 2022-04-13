@@ -3,6 +3,7 @@
 
 import UIKit
 import RxSwift
+import Alamofire
 
 class SearchResultCell: UICollectionViewCell {
 
@@ -11,10 +12,17 @@ class SearchResultCell: UICollectionViewCell {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var publishedYearLabel: UILabel!
     
-    func bind(imageUrl: String, title: String, authorName: String, publishedYear: Int) {
-        self.thumbnailImageView.image = ImageLoader.loadFromUrl(url: imageUrl)
-        self.titleLabel.text = title
-        self.authorNameLabel.text = authorName
+    func bind(item: Book) {
+        AF.request("https://bookthumb-phinf.pstatic.net/cover/206/335/20633531.jpg?udate=20211231", method: .get).response { response in
+            switch response.result {
+            case .success(let responseData):
+                self.thumbnailImageView.image = UIImage(data: responseData!)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        self.titleLabel.text = item.title
+        self.authorNameLabel.text = item.authorName
         self.publishedYearLabel.text = "2018"
     }
     

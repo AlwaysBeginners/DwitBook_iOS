@@ -10,7 +10,7 @@ struct Book: Codable {
     var description: String
     var authorName: String
     var publisherName: String
-    var publishedDate: Date
+    var publishedDate: String
     var category: String
     var thumbnailUrl: String
     
@@ -20,7 +20,7 @@ struct Book: Codable {
          description: String,
          authorName: String,
          publisherName: String,
-         publishedDate: Date,
+         publishedDate: String,
          category: String,
          thumbnailUrl: String
     ) {
@@ -34,6 +34,7 @@ struct Book: Codable {
         self.category = category
         self.thumbnailUrl = thumbnailUrl
     }
+    
     
     enum CodingKeys: String, CodingKey {
         case id
