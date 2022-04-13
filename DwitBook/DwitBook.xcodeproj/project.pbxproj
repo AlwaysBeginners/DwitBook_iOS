@@ -93,137 +93,18 @@
 		44A9D6EC28055D6C0086C1FE /* DwitBook */ = {
 			isa = PBXGroup;
 			children = (
+				44A9D7342806A52F0086C1FE /* Resource */,
+				44A9D7312806A4EE0086C1FE /* Model */,
+				44A9D7322806A4F30086C1FE /* View */,
+				44A9D7332806A4F80086C1FE /* ViewModel */,
 				44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */,
 				44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */,
 				44A9D6F828055D6C0086C1FE /* LaunchScreen.storyboard */,
 				44A9D6F328055D6C0086C1FE /* Main.storyboard */,
 				44A9D6F628055D6C0086C1FE /* Assets.xcassets */,
 				44A9D6FB28055D6C0086C1FE /* Info.plist */,
-				44A9D7132805B1720086C1FE /* Common */,
-				44A9D7012805A3B90086C1FE /* Search */,
-				44A9D7032805A3DB0086C1FE /* BookReview */,
-				44A9D7022805A3D10086C1FE /* MyPage */,
 			);
 			path = DwitBook;
-			sourceTree = "<group>";
-		};
-		44A9D7012805A3B90086C1FE /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7062805A3FB0086C1FE /* Model */,
-				44A9D7052805A3F60086C1FE /* View */,
-				44A9D7042805A3EE0086C1FE /* ViewModel */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		44A9D7022805A3D10086C1FE /* MyPage */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D70C2805A4260086C1FE /* Model */,
-				44A9D70B2805A4210086C1FE /* View */,
-				44A9D70A2805A41C0086C1FE /* ViewModel */,
-			);
-			path = MyPage;
-			sourceTree = "<group>";
-		};
-		44A9D7032805A3DB0086C1FE /* BookReview */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7092805A4100086C1FE /* Model */,
-				44A9D7082805A40C0086C1FE /* View */,
-				44A9D7072805A4070086C1FE /* ViewModel */,
-			);
-			path = BookReview;
-			sourceTree = "<group>";
-		};
-		44A9D7042805A3EE0086C1FE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D72C2806036E0086C1FE /* SearchViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		44A9D7052805A3F60086C1FE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7232806013B0086C1FE /* CustomCell */,
-				44A9D70D2805A4570086C1FE /* Search.storyboard */,
-				44A9D71D2805BAEA0086C1FE /* SearchHomeViewController.swift */,
-				44A9D71F2805BC530086C1FE /* SearchViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		44A9D7062805A3FB0086C1FE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7282806029E0086C1FE /* Search.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		44A9D7072805A4070086C1FE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		44A9D7082805A40C0086C1FE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D70F2805A4640086C1FE /* BookReview.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		44A9D7092805A4100086C1FE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		44A9D70A2805A41C0086C1FE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		44A9D70B2805A4210086C1FE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7112805A46D0086C1FE /* MyPage.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		44A9D70C2805A4260086C1FE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		44A9D7132805B1720086C1FE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7142805B17E0086C1FE /* Model */,
-				44A9D72E2806041D0086C1FE /* SampleData */,
-				44A9D7172805B1E10086C1FE /* search-home-animation.json */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		44A9D7142805B17E0086C1FE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				44A9D7152805B1900086C1FE /* Book.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		44A9D7232806013B0086C1FE /* CustomCell */ = {
@@ -241,6 +122,69 @@
 				44A9D72F2806043B0086C1FE /* suggestionSampleData.json */,
 			);
 			path = SampleData;
+			sourceTree = "<group>";
+		};
+		44A9D7312806A4EE0086C1FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7152805B1900086C1FE /* Book.swift */,
+				44A9D7282806029E0086C1FE /* Search.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44A9D7322806A4F30086C1FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7352806A54B0086C1FE /* Search */,
+				44A9D7372806A5660086C1FE /* Review */,
+				44A9D7362806A55F0086C1FE /* MyPage */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44A9D7332806A4F80086C1FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D72C2806036E0086C1FE /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44A9D7342806A52F0086C1FE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7172805B1E10086C1FE /* search-home-animation.json */,
+				44A9D72E2806041D0086C1FE /* SampleData */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		44A9D7352806A54B0086C1FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7232806013B0086C1FE /* CustomCell */,
+				44A9D70D2805A4570086C1FE /* Search.storyboard */,
+				44A9D71D2805BAEA0086C1FE /* SearchHomeViewController.swift */,
+				44A9D71F2805BC530086C1FE /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		44A9D7362806A55F0086C1FE /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D7112805A46D0086C1FE /* MyPage.storyboard */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		44A9D7372806A5660086C1FE /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				44A9D70F2805A4640086C1FE /* BookReview.storyboard */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		F71A50426C795FD4CF84095D /* Pods */ = {
