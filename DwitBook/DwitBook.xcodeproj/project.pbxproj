@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		440A00EE28070EC100AB824D /* searchResultSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 440A00ED28070EC100AB824D /* searchResultSampleData.json */; };
+		440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
 		44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F328055D6C0086C1FE /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		440A00ED28070EC100AB824D /* searchResultSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = searchResultSampleData.json; sourceTree = "<group>"; };
+		440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerExtension.swift; sourceTree = "<group>"; };
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				44A9D7242806016C0086C1FE /* SuggestionCell.swift */,
 				44A9D7252806016C0086C1FE /* SuggestionCell.xib */,
 				44A9D73C2806CB4F0086C1FE /* SearchResultCell.swift */,
+				440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */,
 				44A9D7162805B1900086C1FE /* Book.swift in Sources */,
 				44A9D7292806029E0086C1FE /* Search.swift in Sources */,
+				440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */,
 				44A9D71E2805BAEA0086C1FE /* SearchHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +489,7 @@
 				DEVELOPMENT_TEAM = VV2G7CU8KX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DwitBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "뒷북";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -515,6 +520,7 @@
 				DEVELOPMENT_TEAM = VV2G7CU8KX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DwitBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "뒷북";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

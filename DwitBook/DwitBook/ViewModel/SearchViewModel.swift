@@ -13,7 +13,7 @@ class SearchViewModel {
         return response.suggestionList
     }
     
-    func searchResultList(query: String) -> [Book] {
+    func searchResultList(query: String) -> [SearchResult] {
         let response: SearchResponse = getSampleData(filename: "searchResultSampleData")
         return response.resultList
     }

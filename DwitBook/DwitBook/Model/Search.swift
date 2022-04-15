@@ -9,7 +9,7 @@ protocol NetworkResponse {
 
 struct SearchResponse: NetworkResponse, Codable {
     var statusCode: Int
-    var resultList: [Book]
+    var resultList: [SearchResult]
     
     enum CodingKeys: String, CodingKey {
         case statusCode = "status"
@@ -29,4 +29,20 @@ struct SuggestionResponse: NetworkResponse, Codable {
     }
     
     static let EMPTY = SuggestionResponse(statusCode: 0, suggestionList: [])
+}
+
+struct SearchResult: Codable {
+    var id: Int
+    var thumbnailUrl: String
+    var title: String
+    var authorName: String
+    var publishedDate: Date
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case thumbnailUrl = "thumbnail_url"
+        case title
+        case authorName = "author_name"
+        case publishedDate = "published_date"
+    }
 }

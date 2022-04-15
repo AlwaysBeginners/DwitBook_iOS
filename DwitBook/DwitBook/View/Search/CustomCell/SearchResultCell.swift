@@ -12,7 +12,11 @@ class SearchResultCell: UICollectionViewCell {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var publishedYearLabel: UILabel!
     
-    func bind(item: Book) {
+    override class func awakeFromNib() {
+        
+    }
+    
+    func bind(item: SearchResult) {
         AF.request("https://bookthumb-phinf.pstatic.net/cover/206/335/20633531.jpg?udate=20211231", method: .get).response { response in
             switch response.result {
             case .success(let responseData):
