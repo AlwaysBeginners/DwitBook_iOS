@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		440A00EE28070EC100AB824D /* searchResultSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 440A00ED28070EC100AB824D /* searchResultSampleData.json */; };
 		440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */; };
+		440A00F828091A2200AB824D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00F728091A2200AB824D /* DateExtension.swift */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
 		44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F328055D6C0086C1FE /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		440A00ED28070EC100AB824D /* searchResultSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = searchResultSampleData.json; sourceTree = "<group>"; };
 		440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerExtension.swift; sourceTree = "<group>"; };
+		440A00F728091A2200AB824D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440A00F628091A1A00AB824D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				440A00F728091A2200AB824D /* DateExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		44A9D6E128055D6C0086C1FE = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		44A9D6EC28055D6C0086C1FE /* DwitBook */ = {
 			isa = PBXGroup;
 			children = (
+				440A00F628091A1A00AB824D /* Utils */,
 				44A9D7342806A52F0086C1FE /* Resource */,
 				44A9D7312806A4EE0086C1FE /* Model */,
 				44A9D7322806A4F30086C1FE /* View */,
@@ -333,6 +344,7 @@
 				44A9D73E2806CB4F0086C1FE /* SearchResultCell.swift in Sources */,
 				44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */,
 				44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */,
+				440A00F828091A2200AB824D /* DateExtension.swift in Sources */,
 				44A9D7162805B1900086C1FE /* Book.swift in Sources */,
 				44A9D7292806029E0086C1FE /* Search.swift in Sources */,
 				440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */,
