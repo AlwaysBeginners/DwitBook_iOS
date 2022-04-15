@@ -9,9 +9,15 @@ import RxSwift
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func searchAction() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
         guard let query = passedQuery else {return}
         searchResultList.onNext(viewModel.searchResultList(query: query))
         setResultCollectionView()
+        
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
     
     func setResultCollectionView() {
@@ -32,18 +38,21 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelega
                 //self?.pushReviewVC(bookId: Int)
             })
             .disposed(by: disposeBag)
+        
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
     
     // cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width * 0.45
-        let height = width * 1.8
+        let height = width * 1.85
         return CGSize(width: width, height: height)
     }
     
     // collectionView inset
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 10, left: 12, bottom: 12, right: 10)
     }
     
 }

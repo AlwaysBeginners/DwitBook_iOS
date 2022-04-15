@@ -12,8 +12,15 @@ class SearchResultCell: UICollectionViewCell {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var publishedYearLabel: UILabel!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // border
+        self.contentView.setBorder()
         
+        // shadow
+        self.setShadow()
+        
+        thumbnailImageView.setBorder()
     }
     
     func bind(item: SearchResult) {
@@ -27,7 +34,7 @@ class SearchResultCell: UICollectionViewCell {
         }
         self.titleLabel.text = item.title
         self.authorNameLabel.text = item.authorName
-        self.publishedYearLabel.text = "2018"
+        self.publishedYearLabel.text = String(describing: item.publishedDate.year)
     }
     
 }

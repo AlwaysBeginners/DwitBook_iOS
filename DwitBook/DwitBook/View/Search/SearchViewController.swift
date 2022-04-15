@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     @IBOutlet var filterButtons: [UIButton]!
     @IBOutlet weak var resultCollectionView: UICollectionView!
     var suggestionTableView = UITableView()
+    var activityIndicator = UIActivityIndicatorView()
     
     var isInitial: Bool!
     var passedQuery: String?
@@ -28,6 +29,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         setDelegate()
+        setActivityIndicatorView()
         addSearchBarViewBottomBorder()
         setFilterButtonsAppearance()
         addSuggestionTableView()
@@ -47,9 +49,21 @@ class SearchViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        self.suggestionTableView.isHidden = true
+    }
+    
     private func setDelegate() {
         searchTextField.delegate = self
         resultCollectionView.delegate = self
+    }
+    
+    func setActivityIndicatorView() {
+        activityIndicator.style = .medium
+        activityIndicator.center = resultView.center
+        self.view.addSubview(activityIndicator)
     }
     
     func pushSearchVC(query: String) {
@@ -60,8 +74,6 @@ class SearchViewController: UIViewController {
         searchVC.isInitial = false
         searchVC.passedQuery = query
         
-        suggestionTableView.isHidden = true
-        
         self.navigationController?.pushViewController(searchVC, animated: false)
     }
     
@@ -71,15 +83,18 @@ class SearchViewController: UIViewController {
     
     @IBAction func filterButtonClicked(_ sender: UIButton) {
         // parameter 바꿔서 다시 요청
-        
         sender.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.2)
         
         switch sender.tag {
             
         case 0:
+            //유사도순 search
+            searchAction()
             filterButtons[1].backgroundColor = .white
             break
         case 1:
+            //출간일순 search
+            searchAction()
             filterButtons[0].backgroundColor = .white
             break
         default:
@@ -112,7 +127,7 @@ extension SearchViewController: UITextFieldDelegate {
         timer?.invalidate()
         
         if searchTextField.text != "" {
-            timer = .scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
+            timer = .scheduledTimer(withTimeInterval: 0.3, repeats: false) { [weak self] _ in
                 guard let query = self?.searchTextField.text else {return}
                 self?.bindSuggestionsToTableView(query: query)
                 self?.suggestionTableView.isHidden = false
