@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ci-uM-6Uu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ReviewViewController" id="Y6W-OH-hqX" customClass="ReviewViewController" customModule="DwitBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPk-Er-vwL" userLabel="Book Info View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-gH-s8T" userLabel="ImageView Container">
+                                        <rect key="frame" x="138.5" y="55.5" width="137" height="205"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-Yw-hub">
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="205"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5Du-Yw-hub" secondAttribute="trailing" id="C0U-25-k9w"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Du-Yw-hub" secondAttribute="bottom" id="PEx-os-Jgs"/>
+                                            <constraint firstItem="5Du-Yw-hub" firstAttribute="top" secondItem="eDE-gH-s8T" secondAttribute="top" id="T9G-z8-Dhs"/>
+                                            <constraint firstAttribute="width" secondItem="eDE-gH-s8T" secondAttribute="height" multiplier="2:3" id="Tgf-Vh-21A"/>
+                                            <constraint firstItem="5Du-Yw-hub" firstAttribute="leading" secondItem="eDE-gH-s8T" secondAttribute="leading" id="uIM-3x-pxg"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-eT-d3O">
+                                        <rect key="frame" x="62" y="275.5" width="290" height="130.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자율주행차량 운전주행모드 자동 전환용 인식률 90% 이상의 다중 센서 기반 운전자 상태 인식 및 상황 인식 원천 기술 개발" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="xIU-da-HgT">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="75.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="tHn-6K-ZMR">
+                                                <rect key="frame" x="0.0" y="75.5" width="290" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" name="LabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-Vr-bBP">
+                                                <rect key="frame" x="0.0" y="105.5" width="290" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xIU-da-HgT" firstAttribute="height" secondItem="tHn-6K-ZMR" secondAttribute="height" multiplier="2.5" id="qkD-g7-gyX"/>
+                                            <constraint firstItem="tHn-6K-ZMR" firstAttribute="height" secondItem="XiZ-Vr-bBP" secondAttribute="height" multiplier="1.2" id="yI1-qC-FJ4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="eDE-gH-s8T" firstAttribute="width" secondItem="UPk-Er-vwL" secondAttribute="width" multiplier="0.33" id="VlH-UB-hye"/>
+                                    <constraint firstItem="eDE-gH-s8T" firstAttribute="centerY" secondItem="UPk-Er-vwL" secondAttribute="centerY" multiplier="0.75" id="Z7u-c3-xw2"/>
+                                    <constraint firstItem="ZMy-eT-d3O" firstAttribute="top" secondItem="eDE-gH-s8T" secondAttribute="bottom" constant="15" id="gSa-7Z-Wq6"/>
+                                    <constraint firstItem="eDE-gH-s8T" firstAttribute="centerX" secondItem="UPk-Er-vwL" secondAttribute="centerX" id="kG8-oV-K0H"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZMy-eT-d3O" secondAttribute="bottom" constant="15" id="m31-hQ-lbh"/>
+                                    <constraint firstItem="ZMy-eT-d3O" firstAttribute="centerX" secondItem="UPk-Er-vwL" secondAttribute="centerX" id="qf6-uZ-Sjc"/>
+                                    <constraint firstItem="ZMy-eT-d3O" firstAttribute="width" secondItem="UPk-Er-vwL" secondAttribute="width" multiplier="0.7" id="v66-xX-ndK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UPk-Er-vwL" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.47" id="3fy-iI-abb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UPk-Er-vwL" secondAttribute="trailing" id="4Xj-u9-rG2"/>
+                            <constraint firstItem="UPk-Er-vwL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7Yq-4O-pPK"/>
+                            <constraint firstItem="UPk-Er-vwL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="zGb-7Q-dca"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="cQa-vi-gbn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="ayr-82-UaC">
+                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" name="MainColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorLabel" destination="tHn-6K-ZMR" id="F01-jl-YD2"/>
+                        <outlet property="bookThumbnailImageView" destination="5Du-Yw-hub" id="ICb-nH-3hi"/>
+                        <outlet property="bookTitleLabel" destination="xIU-da-HgT" id="DSJ-if-w9G"/>
+                        <outlet property="imageContainerView" destination="eDE-gH-s8T" id="g67-xG-kZ9"/>
+                        <outlet property="publishedYearLabel" destination="XiZ-Vr-bBP" id="z3d-AP-3gX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mNt-Uf-ChQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ci-uM-6Uu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p9Q-Nr-o7b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="4eW-AR-olv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaf-yd-F2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.99599999189376831" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.49000000953674316" green="0.73000001907348633" blue="0.43999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

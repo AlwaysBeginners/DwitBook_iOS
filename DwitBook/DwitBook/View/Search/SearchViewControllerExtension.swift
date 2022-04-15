@@ -32,10 +32,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelega
         .disposed(by: disposeBag)
         
         // cell selection event
-        _ = resultCollectionView.rx.modelSelected(Book.self)
-            .subscribe(onNext: { [weak self] book in
+        _ = resultCollectionView.rx.modelSelected(SearchResult.self)
+            .subscribe(onNext: { [weak self] bookResult in
                 // push book review page
-                //self?.pushReviewVC(bookId: Int)
+                guard let reviewVC = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "ReviewViewController") as? ReviewViewController else {return}
+                reviewVC.bookId = bookResult.id
+                self?.navigationController?.pushViewController(reviewVC, animated: true)
+            }, onError: { error in
+                print(error)
             })
             .disposed(by: disposeBag)
         
