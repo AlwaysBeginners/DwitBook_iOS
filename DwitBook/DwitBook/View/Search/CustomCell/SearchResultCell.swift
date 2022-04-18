@@ -7,7 +7,7 @@ import Alamofire
 
 class SearchResultCell: UICollectionViewCell {
 
-    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var thumbnailCustomView: ShadowedImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var publishedYearLabel: UILabel!
@@ -19,19 +19,10 @@ class SearchResultCell: UICollectionViewCell {
         
         // shadow
         self.setShadow()
-        
-        thumbnailImageView.setBorder()
     }
     
     func bind(item: SearchResult) {
-        AF.request("https://bookthumb-phinf.pstatic.net/cover/206/335/20633531.jpg?udate=20211231", method: .get).response { response in
-            switch response.result {
-            case .success(let responseData):
-                self.thumbnailImageView.image = UIImage(data: responseData!)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        self.thumbnailCustomView.setImage(url: item.thumbnailUrl)
         self.titleLabel.text = item.title
         self.authorNameLabel.text = item.authorName
         self.publishedYearLabel.text = String(describing: item.publishedDate.year)

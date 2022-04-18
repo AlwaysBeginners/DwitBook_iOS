@@ -11,9 +11,12 @@
 		440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */; };
 		440A00F828091A2200AB824D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00F728091A2200AB824D /* DateExtension.swift */; };
 		440A00FE280953FA00AB824D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A00FD280953FA00AB824D /* UIViewExtension.swift */; };
-		440A010828096D5100AB824D /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A010728096D5100AB824D /* ReviewViewController.swift */; };
+		440A010828096D5100AB824D /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A010728096D5100AB824D /* BookDetailViewController.swift */; };
 		440A010A2809799C00AB824D /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A01092809799C00AB824D /* ReviewViewModel.swift */; };
 		440A010C28097AC400AB824D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A010B28097AC400AB824D /* Review.swift */; };
+		44335B5B280C4F56005ECB3C /* ReviewBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */; };
+		44335B5D280D84AA005ECB3C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5C280D84AA005ECB3C /* ReviewViewController.swift */; };
+		44335B5F280D85A0005ECB3C /* ShadowedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
 		44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F328055D6C0086C1FE /* Main.storyboard */; };
@@ -40,9 +43,12 @@
 		440A00EF2808002A00AB824D /* SearchViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerExtension.swift; sourceTree = "<group>"; };
 		440A00F728091A2200AB824D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		440A00FD280953FA00AB824D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		440A010728096D5100AB824D /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		440A010728096D5100AB824D /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		440A01092809799C00AB824D /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		440A010B28097AC400AB824D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBlockView.swift; sourceTree = "<group>"; };
+		44335B5C280D84AA005ECB3C /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedImageView.swift; sourceTree = "<group>"; };
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +93,15 @@
 				440A00FD280953FA00AB824D /* UIViewExtension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		44335B59280C4F27005ECB3C /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */,
+				44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		44A9D6E128055D6C0086C1FE = {
@@ -157,6 +172,7 @@
 		44A9D7322806A4F30086C1FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44335B59280C4F27005ECB3C /* CustomView */,
 				44A9D7352806A54B0086C1FE /* Search */,
 				44A9D7372806A5660086C1FE /* Review */,
 				44A9D7362806A55F0086C1FE /* MyPage */,
@@ -206,7 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				44A9D70F2805A4640086C1FE /* Review.storyboard */,
-				440A010728096D5100AB824D /* ReviewViewController.swift */,
+				440A010728096D5100AB824D /* BookDetailViewController.swift */,
+				44335B5C280D84AA005ECB3C /* ReviewViewController.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -351,18 +368,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				44A9D7202805BC530086C1FE /* SearchViewController.swift in Sources */,
+				44335B5F280D85A0005ECB3C /* ShadowedImageView.swift in Sources */,
 				44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */,
 				440A010A2809799C00AB824D /* ReviewViewModel.swift in Sources */,
-				440A010828096D5100AB824D /* ReviewViewController.swift in Sources */,
+				440A010828096D5100AB824D /* BookDetailViewController.swift in Sources */,
 				44A9D72D2806036E0086C1FE /* SearchViewModel.swift in Sources */,
 				440A010C28097AC400AB824D /* Review.swift in Sources */,
 				44A9D73E2806CB4F0086C1FE /* SearchResultCell.swift in Sources */,
 				44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */,
+				44335B5B280C4F56005ECB3C /* ReviewBlockView.swift in Sources */,
 				44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */,
 				440A00F828091A2200AB824D /* DateExtension.swift in Sources */,
 				44A9D7162805B1900086C1FE /* Book.swift in Sources */,
 				440A00FE280953FA00AB824D /* UIViewExtension.swift in Sources */,
 				44A9D7292806029E0086C1FE /* Search.swift in Sources */,
+				44335B5D280D84AA005ECB3C /* ReviewViewController.swift in Sources */,
 				440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */,
 				44A9D71E2805BAEA0086C1FE /* SearchHomeViewController.swift in Sources */,
 			);

@@ -19,8 +19,8 @@ class SearchViewController: UIViewController {
     var passedQuery: String?
     var timer: Timer?
     
-    var suggestionList = BehaviorSubject<[String]>(value: [])
-    var searchResultList = BehaviorSubject<[SearchResult]>(value: [])
+    var suggestionList = BehaviorRelay<[String]>(value: [])
+    var searchResultList = BehaviorRelay<[SearchResult]>(value: [])
     
     let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
@@ -35,6 +35,8 @@ class SearchViewController: UIViewController {
         addSuggestionTableView()
         setSearchTextField()
         
+        bindResultCollectionView()
+        bindSuggestionTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,8 +130,12 @@ extension SearchViewController: UITextFieldDelegate {
         
         if searchTextField.text != "" {
             timer = .scheduledTimer(withTimeInterval: 0.3, repeats: false) { [weak self] _ in
+                self?.suggestionTableView.isHidden = false
+                
                 guard let query = self?.searchTextField.text else {return}
-                self?.bindSuggestionsToTableView(query: query)
+                guard let newSuggestionData = self?.viewModel.suggestionList(query: query) else {return}
+                self?.suggestionList.accept(newSuggestionData)
+                
                 self?.suggestionTableView.isHidden = false
             }
         } else {

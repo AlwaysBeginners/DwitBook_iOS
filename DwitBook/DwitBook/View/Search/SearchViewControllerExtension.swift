@@ -9,22 +9,25 @@ import RxSwift
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func searchAction() {
+        
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
         guard let query = passedQuery else {return}
-        searchResultList.onNext(viewModel.searchResultList(query: query))
-        setResultCollectionView()
+        searchResultList.accept(viewModel.searchResultList(query: query))
         
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
+        
     }
     
-    func setResultCollectionView() {
-        resultCollectionView.dataSource = nil
+    func bindResultCollectionView() {
+        
+        resultCollectionView.keyboardDismissMode = .onDrag
         
         // collection view datasource
-        _ = searchResultList.bind(to: resultCollectionView.rx.items(cellIdentifier: "SearchResultCell", cellType: SearchResultCell.self)) { index, element, cell in
+        _ = searchResultList
+            .bind(to: resultCollectionView.rx.items(cellIdentifier: "SearchResultCell", cellType: SearchResultCell.self)) { index, element, cell in
             
             cell.bind(item: element)
             
@@ -35,16 +38,13 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelega
         _ = resultCollectionView.rx.modelSelected(SearchResult.self)
             .subscribe(onNext: { [weak self] bookResult in
                 // push book review page
-                guard let reviewVC = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "ReviewViewController") as? ReviewViewController else {return}
-                reviewVC.bookId = bookResult.id
-                self?.navigationController?.pushViewController(reviewVC, animated: true)
+                guard let bookDVC = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "BookDetailViewController") as? BookDetailViewController else {return}
+                bookDVC.bookId = bookResult.id
+                self?.navigationController?.pushViewController(bookDVC, animated: true)
             }, onError: { error in
                 print(error)
             })
             .disposed(by: disposeBag)
-        
-        activityIndicator.stopAnimating()
-        activityIndicator.isHidden = true
     }
     
     // cell size
@@ -84,11 +84,11 @@ extension SearchViewController {
         suggestionTableView.isHidden = true
     }
     
-    func bindSuggestionsToTableView(query: String) {
-        suggestionList.onNext(viewModel.suggestionList(query: query))
-        suggestionTableView.dataSource = nil // for binding new datasource
+    func bindSuggestionTableView() {
         
         _ = suggestionList
+            .asObservable()
+            .observe(on: MainScheduler.instance)
             .bind(to: suggestionTableView.rx.items(cellIdentifier: "SuggestionCell", cellType: SuggestionCell.self)) { index, element, cell in
                 cell.bind(text: element)
             }
