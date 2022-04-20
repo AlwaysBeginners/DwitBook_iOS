@@ -17,6 +17,7 @@
 		44335B5B280C4F56005ECB3C /* ReviewBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */; };
 		44335B5D280D84AA005ECB3C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5C280D84AA005ECB3C /* ReviewViewController.swift */; };
 		44335B5F280D85A0005ECB3C /* ShadowedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */; };
+		449A8D7B280FF57B00307E2A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449A8D7A280FF57B00307E2A /* StringExtension.swift */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
 		44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */; };
 		44A9D6F528055D6C0086C1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A9D6F328055D6C0086C1FE /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBlockView.swift; sourceTree = "<group>"; };
 		44335B5C280D84AA005ECB3C /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedImageView.swift; sourceTree = "<group>"; };
+		449A8D7A280FF57B00307E2A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				440A00F728091A2200AB824D /* DateExtension.swift */,
 				440A00FD280953FA00AB824D /* UIViewExtension.swift */,
+				449A8D7A280FF57B00307E2A /* StringExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				440A00FE280953FA00AB824D /* UIViewExtension.swift in Sources */,
 				44A9D7292806029E0086C1FE /* Search.swift in Sources */,
 				44335B5D280D84AA005ECB3C /* ReviewViewController.swift in Sources */,
+				449A8D7B280FF57B00307E2A /* StringExtension.swift in Sources */,
 				440A00F02808002A00AB824D /* SearchViewControllerExtension.swift in Sources */,
 				44A9D71E2805BAEA0086C1FE /* SearchHomeViewController.swift in Sources */,
 			);

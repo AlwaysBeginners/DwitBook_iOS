@@ -74,7 +74,7 @@ class SearchViewController: UIViewController {
         let searchVC = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         
         searchVC.isInitial = false
-        searchVC.passedQuery = query
+        searchVC.passedQuery = query.removeForwardWhiteSpaces()
         
         self.navigationController?.pushViewController(searchVC, animated: false)
     }
@@ -128,12 +128,16 @@ extension SearchViewController: UITextFieldDelegate {
     @objc func textFieldDidChange(_ sender: UITextField) {
         timer?.invalidate()
         
-        if searchTextField.text != "" {
+        guard let searchFieldText = searchTextField.text else {return}
+        
+        if !searchFieldText.onlyWhiteSpace {
             timer = .scheduledTimer(withTimeInterval: 0.3, repeats: false) { [weak self] _ in
                 self?.suggestionTableView.isHidden = false
                 
-                guard let query = self?.searchTextField.text else {return}
+                let query = searchFieldText.removeForwardWhiteSpaces()
+                
                 guard let newSuggestionData = self?.viewModel.suggestionList(query: query) else {return}
+                
                 self?.suggestionList.accept(newSuggestionData)
                 
                 self?.suggestionTableView.isHidden = false
