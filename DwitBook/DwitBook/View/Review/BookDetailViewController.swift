@@ -8,11 +8,8 @@ class BookDetailViewController: UIViewController {
     
     var bookId: Int!
     
-    @IBOutlet weak var bookInfoStackView: UIStackView!
-    @IBOutlet weak var thumbnailCustomView: ShadowedImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var publishedYearLabel: UILabel!
+    @IBOutlet weak var bookThumbnailContainer: UIView!
+    @IBOutlet weak var bookImageView: UIImageView!
     
     let viewModel = ReviewViewModel()
     let disposeBag = DisposeBag()
@@ -21,6 +18,12 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setLeftBarButtonItem()
+        bookThumbnailContainer.backgroundColor = UIColor(patternImage: UIImage(named: "sample")!)
+        bookThumbnailContainer.addBlurEffect()
+        bookImageView.layer.cornerRadius = 5
+    }
+    
+    @IBAction func bookInfoButtonClicked(_ sender: Any) {
         
     }
     
@@ -28,7 +31,7 @@ class BookDetailViewController: UIViewController {
         let leftItem = UIBarButtonItem(image: UIImage(systemName: "lasso"), style: .plain, target: self, action: #selector(backButtonClicked(_:)))
         leftItem.tintColor = UIColor(named: "MainColor")
         
-        self.navigationController?.navigationItem.leftBarButtonItem = leftItem
+        self.navigationItem.leftBarButtonItem = leftItem
     }
     
     @objc func backButtonClicked(_ sender: Any) {

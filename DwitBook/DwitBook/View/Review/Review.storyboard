@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,66 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s2e-wg-Fr7" userLabel="Book Info Stack View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="314"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-mg-7xI" userLabel="Book ImageView Container">
+                                <rect key="frame" x="0.0" y="44" width="414" height="269"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVP-dq-7lY" userLabel="ImageView Container" customClass="ShadowedImageView" customModule="DwitBook" customModuleProvider="target">
-                                        <rect key="frame" x="134.5" y="10" width="145" height="217.5"/>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nff-qB-0Ix">
+                                        <rect key="frame" x="126.5" y="13.5" width="161" height="242"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="KVP-dq-7lY" secondAttribute="height" multiplier="2:3" id="7xU-Jg-uBS"/>
+                                            <constraint firstAttribute="width" secondItem="nff-qB-0Ix" secondAttribute="height" multiplier="2:3" id="XY6-Sg-hvf"/>
                                         </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ddm-Mw-d0u">
-                                        <rect key="frame" x="52" y="237.5" width="310.5" height="66.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-gq-og0">
-                                                <rect key="frame" x="0.0" y="0.0" width="310.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AFo-mc-BdM">
-                                                <rect key="frame" x="0.0" y="29" width="310.5" height="37.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgN-Pd-E85">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" name="LabelColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVB-ZG-2VC">
-                                                        <rect key="frame" x="0.0" y="19.5" width="310.5" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYK-9z-zZX">
+                                        <rect key="frame" x="374" y="229" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="TXv-gw-Qhj"/>
+                                            <constraint firstAttribute="height" constant="35" id="oxi-VB-4TD"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                            <color key="baseForegroundColor" name="MainColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="bookInfoButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7sc-HM-g1V"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Ddm-Mw-d0u" firstAttribute="width" secondItem="s2e-wg-Fr7" secondAttribute="width" multiplier="0.75" id="ACs-lx-L4Z"/>
-                                    <constraint firstItem="KVP-dq-7lY" firstAttribute="width" secondItem="s2e-wg-Fr7" secondAttribute="width" multiplier="0.35" id="kzA-tY-qrF"/>
+                                    <constraint firstAttribute="bottom" secondItem="BYK-9z-zZX" secondAttribute="bottom" constant="5" id="7hk-Oh-BAj"/>
+                                    <constraint firstItem="nff-qB-0Ix" firstAttribute="centerY" secondItem="Bzf-mg-7xI" secondAttribute="centerY" id="gMW-LI-Jrp"/>
+                                    <constraint firstItem="nff-qB-0Ix" firstAttribute="width" secondItem="Bzf-mg-7xI" secondAttribute="width" multiplier="0.39" id="iZG-8u-OkF"/>
+                                    <constraint firstAttribute="trailing" secondItem="BYK-9z-zZX" secondAttribute="trailing" constant="5" id="tuD-Ls-gn8"/>
+                                    <constraint firstItem="nff-qB-0Ix" firstAttribute="centerX" secondItem="Bzf-mg-7xI" secondAttribute="centerX" id="ymt-Wa-ZIj"/>
                                 </constraints>
-                                <edgeInsets key="layoutMargins" top="10" left="0.0" bottom="10" right="0.0"/>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="s2e-wg-Fr7" secondAttribute="trailing" id="Bn8-m1-cdB"/>
-                            <constraint firstItem="s2e-wg-Fr7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="gnz-mG-SlX"/>
-                            <constraint firstItem="s2e-wg-Fr7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="shy-vy-V24"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bzf-mg-7xI" secondAttribute="trailing" id="BGC-nn-Vod"/>
+                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GyH-Vu-9ju"/>
+                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cGa-gM-zpY"/>
+                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.3" id="lwg-sv-xc2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Ois-H8-Qhg"/>
                     <connections>
-                        <outlet property="authorLabel" destination="MgN-Pd-E85" id="5vF-ij-WiO"/>
-                        <outlet property="bookInfoStackView" destination="s2e-wg-Fr7" id="met-g3-SJJ"/>
-                        <outlet property="publishedYearLabel" destination="oVB-ZG-2VC" id="MzB-5Z-5fM"/>
-                        <outlet property="thumbnailCustomView" destination="KVP-dq-7lY" id="DKk-Bw-87M"/>
-                        <outlet property="titleLabel" destination="amP-gq-og0" id="h8n-p9-su6"/>
+                        <outlet property="bookImageView" destination="nff-qB-0Ix" id="jBq-56-aXl"/>
+                        <outlet property="bookThumbnailContainer" destination="Bzf-mg-7xI" id="Ceb-Gr-43M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="BackgroundColor">
             <color red="0.99599999189376831" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -208,15 +198,15 @@
         <namedColor name="LabelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.49000000953674316" green="0.73000001907348633" blue="0.43999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ReviewBlockColor">
             <color red="0.99599999189376831" green="0.96100002527236938" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="StarColor">
             <color red="0.60399997234344482" green="0.91399997472763062" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

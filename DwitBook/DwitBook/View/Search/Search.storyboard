@@ -193,7 +193,7 @@
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-AR-fjN">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="715"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="414" height="713.5"/>
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SQS-Rf-poH">
                                             <size key="itemSize" width="157" height="128"/>
@@ -273,7 +273,7 @@
                                     <constraint firstAttribute="trailing" secondItem="d9d-AR-fjN" secondAttribute="trailing" id="XTV-jU-D8T"/>
                                     <constraint firstItem="jmv-kn-3t9" firstAttribute="top" secondItem="l5q-KW-SRR" secondAttribute="top" id="ZLJ-Sp-rfl"/>
                                     <constraint firstItem="d9d-AR-fjN" firstAttribute="leading" secondItem="l5q-KW-SRR" secondAttribute="leading" id="aLW-XD-Iae"/>
-                                    <constraint firstItem="d9d-AR-fjN" firstAttribute="top" secondItem="jmv-kn-3t9" secondAttribute="bottom" id="ckP-Z4-KYu"/>
+                                    <constraint firstItem="d9d-AR-fjN" firstAttribute="top" secondItem="jmv-kn-3t9" secondAttribute="bottom" constant="1.5" id="ckP-Z4-KYu"/>
                                     <constraint firstAttribute="trailing" secondItem="jmv-kn-3t9" secondAttribute="trailing" id="lsO-l0-4fv"/>
                                 </constraints>
                             </view>
@@ -291,6 +291,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterButtonContainer" destination="jmv-kn-3t9" id="3QS-le-l7k"/>
                         <outlet property="resultCollectionView" destination="d9d-AR-fjN" id="O1C-TC-jl5"/>
                         <outlet property="resultView" destination="l5q-KW-SRR" id="yDj-Nk-Tc0"/>
                         <outlet property="searchBarView" destination="YcR-pN-62C" id="aQH-bB-TDU"/>

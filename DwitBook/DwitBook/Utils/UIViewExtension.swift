@@ -18,4 +18,20 @@ extension UIView {
         self.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
         self.layer.borderWidth = 1
     }
+    
+    func addBottomBorder(color: UIColor?, lineWidth: CGFloat) {
+        let bottomLayer = CALayer()
+        bottomLayer.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width, height: lineWidth)
+        bottomLayer.backgroundColor = color?.cgColor
+        
+        self.layer.addSublayer(bottomLayer)
+    }
+    
+    func addBlurEffect() {
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(blurEffectView)
+    }
 }

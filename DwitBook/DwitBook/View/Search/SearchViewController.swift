@@ -11,7 +11,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var resultView: UIView!
     @IBOutlet var filterButtons: [UIButton]!
+    @IBOutlet weak var filterButtonContainer: UIView!
     @IBOutlet weak var resultCollectionView: UICollectionView!
+    
     var suggestionTableView = UITableView()
     var activityIndicator = UIActivityIndicatorView()
     
@@ -85,7 +87,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func filterButtonClicked(_ sender: UIButton) {
         // parameter 바꿔서 다시 요청
-        sender.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.2)
+        sender.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.1)
         
         switch sender.tag {
             
@@ -152,20 +154,19 @@ extension SearchViewController: UITextFieldDelegate {
 // Appearance feature
 extension SearchViewController {
     private func addSearchBarViewBottomBorder() {
-        let bottomLayer = CALayer()
-        bottomLayer.frame = CGRect(x: 0, y: searchBarView.frame.height, width: searchBarView.frame.width, height: 1.5)
-        bottomLayer.backgroundColor = UIColor(named: "MainColor")?.cgColor
-        
-        searchBarView.layer.addSublayer(bottomLayer)
+        let mainColor = UIColor(named: "MainColor")
+        searchBarView.addBottomBorder(color: mainColor, lineWidth: 1.5)
+        filterButtonContainer.addBottomBorder(color: UIColor(named: "MainColor"), lineWidth: 1.5)
     }
     
     private func setFilterButtonsAppearance() {
-        filterButtons[0].backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.2)
+        filterButtons[0].backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.1)
         
         filterButtons.forEach { button in
             button.layer.borderWidth = 1.5
             button.layer.borderColor = UIColor(named: "MainColor")?.cgColor
             button.layer.cornerRadius = button.frame.height * 0.48
         }
+        
     }
 }
