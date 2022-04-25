@@ -22,7 +22,7 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     func bind(item: SearchResult) {
-        self.thumbnailCustomView.setImage(url: item.thumbnailUrl)
+        self.thumbnailCustomView.imageView.setImageByUrl(url: item.thumbnailUrl)
         self.titleLabel.text = item.title
         self.authorNameLabel.text = item.authorName
         self.publishedYearLabel.text = String(describing: item.publishedDate.year)

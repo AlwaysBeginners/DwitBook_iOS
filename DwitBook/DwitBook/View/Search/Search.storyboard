@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <view userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-rF-seG" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="449" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="498" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fIn-rF-seG" secondAttribute="height" multiplier="480:480" id="OSz-xh-tLw"/>
                                 </constraints>
@@ -88,7 +88,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ky1-OJ-wzo"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lottieAnimationView" destination="fIn-rF-seG" id="vUt-iT-3gE"/>
                         <outlet property="searchBarShapeButton" destination="mLZ-Xq-H0z" id="E1N-Cz-DuG"/>
@@ -117,7 +116,7 @@
                                         </constraints>
                                         <color key="tintColor" name="MainColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                        <buttonConfiguration key="configuration" style="plain" title="">
                                             <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="medium"/>
                                         </buttonConfiguration>
@@ -312,7 +311,7 @@
                         <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="q0K-9I-g6r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0K-9I-g6r">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

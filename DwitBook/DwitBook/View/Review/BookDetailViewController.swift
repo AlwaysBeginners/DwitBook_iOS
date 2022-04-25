@@ -18,9 +18,13 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setLeftBarButtonItem()
-        bookThumbnailContainer.backgroundColor = UIColor(patternImage: UIImage(named: "sample")!)
-        bookThumbnailContainer.addBlurEffect()
         bookImageView.layer.cornerRadius = 5
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.backgroundColor = .lightGray.withAlphaComponent(0.25)
     }
     
     @IBAction func bookInfoButtonClicked(_ sender: Any) {
@@ -28,9 +32,9 @@ class BookDetailViewController: UIViewController {
     }
     
     private func setLeftBarButtonItem() {
-        let leftItem = UIBarButtonItem(image: UIImage(systemName: "lasso"), style: .plain, target: self, action: #selector(backButtonClicked(_:)))
-        leftItem.tintColor = UIColor(named: "MainColor")
+        let leftItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonClicked(_:)))
         
+        leftItem.tintColor = UIColor(named: "MainColor")
         self.navigationItem.leftBarButtonItem = leftItem
     }
     

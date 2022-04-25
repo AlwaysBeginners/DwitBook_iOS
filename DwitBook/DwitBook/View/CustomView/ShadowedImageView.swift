@@ -20,17 +20,6 @@ class ShadowedImageView: UIView {
         self.setShadowAndBorder()
     }
     
-    public func setImage(url: URLConvertible) {
-        AF.request(url, method: .get).response { response in
-            switch response.result {
-            case .success(let responseData):
-                self.imageView.image = UIImage(data: responseData!)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-    
     private func setShadowAndBorder() {
         self.imageView.setBorder()
         self.setShadow()
