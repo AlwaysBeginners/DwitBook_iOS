@@ -38,9 +38,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelega
         _ = resultCollectionView.rx.modelSelected(SearchResult.self)
             .subscribe(onNext: { [weak self] bookResult in
                 // push book review page
-                guard let bookDVC = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "BookDetailViewController") as? BookDetailViewController else {return}
-                bookDVC.bookId = bookResult.id
-                self?.navigationController?.pushViewController(bookDVC, animated: true)
+                guard let bookReviewVC = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "ReviewMainViewController") as? ReviewMainViewController else {return}
+                bookReviewVC.bookId = bookResult.id
+                self?.navigationController?.pushViewController(bookReviewVC, animated: true)
             }, onError: { error in
                 print(error)
             })

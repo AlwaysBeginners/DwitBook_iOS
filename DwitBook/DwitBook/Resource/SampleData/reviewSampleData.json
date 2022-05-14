@@ -1,0 +1,11 @@
+{
+    "review" : {
+        "id" : 0,
+        "book_id" : 0,
+        "rating" : 3.5,
+        "favorite_sentence" : "hello world!",
+        "comment" : "It was just soso",
+        "created_date" : 671685481.068012,
+        "updted_date" : 671685481.068012
+    }
+}

@@ -30,9 +30,11 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
         setDelegate()
         setActivityIndicatorView()
-        addSearchBarViewBottomBorder()
+        setBottomBorder()
         setFilterButtonsAppearance()
         addSuggestionTableView()
         setSearchTextField()
@@ -43,8 +45,6 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.navigationController?.isNavigationBarHidden = true
         
         if isInitial {
             searchTextField.becomeFirstResponder()
@@ -59,6 +59,7 @@ class SearchViewController: UIViewController {
         super.viewWillDisappear(animated)
         timer?.invalidate()
         self.suggestionTableView.isHidden = true
+        searchTextField.resignFirstResponder()
     }
     
     private func setDelegate() {
@@ -155,10 +156,10 @@ extension SearchViewController: UITextFieldDelegate {
 
 // Appearance feature
 extension SearchViewController {
-    private func addSearchBarViewBottomBorder() {
+    private func setBottomBorder() {
         let mainColor = UIColor(named: "MainColor")
-        searchBarView.addBottomBorder(color: mainColor, lineWidth: 1.5)
-        filterButtonContainer.addBottomBorder(color: UIColor(named: "MainColor"), lineWidth: 1.5)
+        searchBarView.addBottomBorder(color: mainColor, lineWidth: 1)
+        filterButtonContainer.addBottomBorder(color: mainColor, lineWidth: 1)
     }
     
     private func setFilterButtonsAppearance() {

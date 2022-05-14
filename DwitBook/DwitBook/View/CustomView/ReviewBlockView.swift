@@ -1,30 +1,34 @@
-//
 //  ReviewBlockView.swift
 //  DwitBook
-//
-//  Created by 정상윤 on 2022/04/17.
-//
 
 import UIKit
 
 class ReviewBlockView: UIView {
     
-    var shadowView: UIView!
+    var shadowLayer = CAShapeLayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(shadowView)
-        shadowView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-        shadowView.setShadow()
         self.setBorder()
+        self.clipsToBounds = false
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.addSubview(shadowView)
-        shadowView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-        shadowView.setShadow()
         self.setBorder()
+        self.clipsToBounds = false
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+        shadowLayer.fillColor = self.backgroundColor?.cgColor
 
+        shadowLayer.shadowOpacity = 0.1
+        shadowLayer.shadowRadius = 4
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 3)
+
+        self.layer.insertSublayer(shadowLayer, at: 0)
+    }
 }

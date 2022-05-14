@@ -23,8 +23,8 @@ struct Review: Codable {
     var favoriteSentence: String
     var comment: String
     
-//    var createdDate: Date
-//    var updatedDate: Date
+    var createdDate: Date
+    var updatedDate: Date
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -33,5 +33,7 @@ struct Review: Codable {
         case rating
         case favoriteSentence = "favorite_sentence"
         case comment
+        case createdDate = "created_date"
+        case updatedDate = "updated_date"
     }
 }

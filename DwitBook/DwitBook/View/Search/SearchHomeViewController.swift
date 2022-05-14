@@ -16,6 +16,11 @@ class SearchHomeViewController: UIViewController {
         setSearchBarShpaeButtonAppearance()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func searchBarShapeButtonClicked(_ sender: Any) {
         if let searchVC = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
             searchVC.isInitial = true
