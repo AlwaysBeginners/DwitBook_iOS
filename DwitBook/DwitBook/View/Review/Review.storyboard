@@ -18,42 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="72U-BO-PLY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="375.5"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-mg-7xI" userLabel="Book ImageView Container">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="331.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nff-qB-0Ix">
-                                        <rect key="frame" x="111.5" y="56.5" width="191" height="287"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nff-qB-0Ix">
+                                        <rect key="frame" x="107.5" y="5" width="199" height="298.5"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="nff-qB-0Ix" secondAttribute="height" multiplier="2:3" id="XY6-Sg-hvf"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYK-9z-zZX">
-                                        <rect key="frame" x="374" y="318.5" width="35" height="35"/>
+                                        <rect key="frame" x="374" y="291.5" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TXv-gw-Qhj"/>
                                             <constraint firstAttribute="height" constant="35" id="oxi-VB-4TD"/>
                                         </constraints>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
-                                            <color key="baseForegroundColor" name="MainColor"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="vk2-ji-1XS" kind="presentation" id="PdV-p8-pfI"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="BYK-9z-zZX" secondAttribute="bottom" constant="5" id="7hk-Oh-BAj"/>
-                                    <constraint firstAttribute="bottom" secondItem="nff-qB-0Ix" secondAttribute="bottom" constant="15" id="fNJ-jG-JDA"/>
+                                    <constraint firstItem="nff-qB-0Ix" firstAttribute="top" secondItem="Bzf-mg-7xI" secondAttribute="top" constant="5" id="hpI-r5-TbV"/>
                                     <constraint firstAttribute="trailing" secondItem="BYK-9z-zZX" secondAttribute="trailing" constant="5" id="tuD-Ls-gn8"/>
-                                    <constraint firstItem="nff-qB-0Ix" firstAttribute="height" secondItem="Bzf-mg-7xI" secondAttribute="height" multiplier="0.8" id="y0i-OE-d9l"/>
+                                    <constraint firstItem="nff-qB-0Ix" firstAttribute="height" secondItem="Bzf-mg-7xI" secondAttribute="height" multiplier="0.9" id="y0i-OE-d9l"/>
                                     <constraint firstItem="nff-qB-0Ix" firstAttribute="centerX" secondItem="Bzf-mg-7xI" secondAttribute="centerX" id="ymt-Wa-ZIj"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjV-Xp-gRF">
-                                <rect key="frame" x="0.0" y="358.5" width="414" height="503.5"/>
+                                <rect key="frame" x="0.0" y="375.5" width="414" height="486.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sam-sT-Wdq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="971.5"/>
@@ -196,20 +199,27 @@ In “Imaginable,” McGonigal stakes out yet another claim to fame: oracle. She
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sjV-Xp-gRF" secondAttribute="trailing" id="90I-HO-CTN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bzf-mg-7xI" secondAttribute="trailing" id="BGC-nn-Vod"/>
                             <constraint firstItem="sjV-Xp-gRF" firstAttribute="top" secondItem="Bzf-mg-7xI" secondAttribute="bottom" id="DyF-yH-0U8"/>
+                            <constraint firstItem="72U-BO-PLY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EBX-44-FFg"/>
                             <constraint firstItem="Bzf-mg-7xI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GyH-Vu-9ju"/>
                             <constraint firstItem="sjV-Xp-gRF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Rbq-bD-PGF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sjV-Xp-gRF" secondAttribute="bottom" id="UXa-nM-9YF"/>
-                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="cGa-gM-zpY"/>
-                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.4" id="lwg-sv-xc2"/>
+                            <constraint firstItem="72U-BO-PLY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="WUo-pj-GpM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="72U-BO-PLY" secondAttribute="trailing" id="Ybp-Qf-ljW"/>
+                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cGa-gM-zpY"/>
+                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.37" id="lwg-sv-xc2"/>
+                            <constraint firstItem="Bzf-mg-7xI" firstAttribute="bottom" secondItem="72U-BO-PLY" secondAttribute="bottom" id="wo9-xX-c4y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Ois-H8-Qhg"/>
                     <connections>
+                        <outlet property="backgroundView" destination="72U-BO-PLY" id="ehO-z3-to5"/>
                         <outlet property="bookImageView" destination="nff-qB-0Ix" id="jBq-56-aXl"/>
                         <outlet property="bookThumbnailContainer" destination="Bzf-mg-7xI" id="Ceb-Gr-43M"/>
-                        <outlet property="favoriteSentenceLabel" destination="F9v-pC-svg" id="ROG-el-LDX"/>
+                        <outlet property="favoriteSentenceLabel" destination="8MH-iq-HxI" id="asS-Cq-lDK"/>
                         <outlet property="myCommentLabel" destination="6WC-La-u9B" id="81O-XP-bkp"/>
                         <outlet property="ratingSlider" destination="vzt-bf-G9i" id="aes-BS-Ks2"/>
+                        <outlet property="reviewContentScrollView" destination="sjV-Xp-gRF" id="Kee-0b-Div"/>
+                        <outlet property="scrollViewTopConstraint" destination="DyF-yH-0U8" id="9SS-MZ-LnT"/>
                         <outletCollection property="starImageViews" destination="5N0-Eu-zCg" collectionClass="NSMutableArray" id="UIH-iJ-Mg4"/>
                         <outletCollection property="starImageViews" destination="NA1-Yl-Lv8" collectionClass="NSMutableArray" id="eix-XQ-5L3"/>
                         <outletCollection property="starImageViews" destination="1FW-fw-pg7" collectionClass="NSMutableArray" id="kvD-nf-3LA"/>
@@ -245,9 +255,6 @@ In “Imaginable,” McGonigal stakes out yet another claim to fame: oracle. She
         </namedColor>
         <namedColor name="LabelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="MainColor">
-            <color red="0.49000000953674316" green="0.73000001907348633" blue="0.43999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ReviewBlockColor">
             <color red="0.99599999189376831" green="0.96100002527236938" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

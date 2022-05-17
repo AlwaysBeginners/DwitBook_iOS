@@ -90,7 +90,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func filterButtonClicked(_ sender: UIButton) {
         // parameter 바꿔서 다시 요청
-        sender.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.1)
+        sender.backgroundColor = .mainColor.withAlphaComponent(0.1)
         
         switch sender.tag {
             
@@ -157,17 +157,16 @@ extension SearchViewController: UITextFieldDelegate {
 // Appearance feature
 extension SearchViewController {
     private func setBottomBorder() {
-        let mainColor = UIColor(named: "MainColor")
-        searchBarView.addBottomBorder(color: mainColor, lineWidth: 1)
-        filterButtonContainer.addBottomBorder(color: mainColor, lineWidth: 1)
+        searchBarView.addBottomBorder(color: .mainColor, lineWidth: 1.5)
+//        filterButtonContainer.addBottomBorder(color: .mainColor, lineWidth: 1)
     }
     
     private func setFilterButtonsAppearance() {
-        filterButtons[0].backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.1)
+        filterButtons[0].backgroundColor = .mainColor.withAlphaComponent(0.1)
         
         filterButtons.forEach { button in
             button.layer.borderWidth = 1.5
-            button.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+            button.layer.borderColor = UIColor.buttonBorderColor.cgColor
             button.layer.cornerRadius = button.frame.height * 0.48
         }
         

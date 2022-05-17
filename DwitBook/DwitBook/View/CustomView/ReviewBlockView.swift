@@ -9,13 +9,13 @@ class ReviewBlockView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setBorder()
+        self.setBorder(color: .lightGray.withAlphaComponent(0.4), width: 1, radius: 10)
         self.clipsToBounds = false
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.setBorder()
+        self.setBorder(color: .lightGray.withAlphaComponent(0.4), width: 1, radius: 10)
         self.clipsToBounds = false
     }
     

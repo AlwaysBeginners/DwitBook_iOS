@@ -37,7 +37,7 @@ class SearchHomeViewController: UIViewController {
     private func setSearchBarShpaeButtonAppearance() {
         searchBarShapeButton.layer.borderWidth = 2
         searchBarShapeButton.layer.cornerRadius = searchBarShapeButton.frame.height * 0.5
-        searchBarShapeButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        searchBarShapeButton.layer.borderColor = UIColor.mainColor.cgColor
     }
     
 }

@@ -15,7 +15,7 @@ class SearchResultCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // border
-        self.contentView.setBorder()
+        self.setBorder(color: .lightGray.withAlphaComponent(0.4), width: 1, radius: 10)
         
         // shadow
         self.setShadow()

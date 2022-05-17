@@ -21,7 +21,7 @@ class ShadowedImageView: UIView {
     }
     
     private func setShadowAndBorder() {
-        self.imageView.setBorder()
+        self.imageView.setBorder(color: .lightGray.withAlphaComponent(0.4), width: 1, radius: 10)
         self.setShadow()
     }
     

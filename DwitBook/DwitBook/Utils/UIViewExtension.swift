@@ -13,11 +13,11 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
     
-    func setBorder() {
+    func setBorder(color: UIColor, width: CGFloat, radius: CGFloat) {
         self.clipsToBounds = true
-        self.layer.cornerRadius = 10
-        self.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
-        self.layer.borderWidth = 1
+        self.layer.cornerRadius = radius
+        self.layer.borderColor = color.withAlphaComponent(0.4).cgColor
+        self.layer.borderWidth = width
     }
     
     func addBottomBorder(color: UIColor?, lineWidth: CGFloat) {
@@ -28,8 +28,8 @@ extension UIView {
         self.layer.addSublayer(bottomLayer)
     }
     
-    func addBlurEffect() {
-        let blurEffect = UIBlurEffect(style: .regular)
+    func addBlurEffect(style: UIBlurEffect.Style) {
+        let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
