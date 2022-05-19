@@ -166,7 +166,7 @@ extension SearchViewController {
         
         filterButtons.forEach { button in
             button.layer.borderWidth = 1.5
-            button.layer.borderColor = UIColor.buttonBorderColor.cgColor
+            button.layer.borderColor = UIColor.mainColor.cgColor
             button.layer.cornerRadius = button.frame.height * 0.48
         }
         

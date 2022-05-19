@@ -254,6 +254,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="XpB-pB-JZR" secondAttribute="bottom" constant="10" id="z10-sk-JeB"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="customSize" width="180" height="320"/>
                                                 <connections>
                                                     <outlet property="authorNameLabel" destination="PQk-JI-4Kh" id="N8J-1J-MjJ"/>

@@ -84,8 +84,8 @@ class ReviewMainViewController: UIViewController {
             let button = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.width*0.45, height: 50))
             button.titleLabel?.text = "리뷰 작성하기"
             button.backgroundColor = .white
-            button.tintColor = .buttonBorderColor
-            button.setBorder(color: .buttonBorderColor, width: 1, radius: 15)
+            button.tintColor = .mainColor
+            button.setBorder(color: .mainColor, width: 1, radius: 15)
             return button
         }
     }

@@ -9,10 +9,6 @@ extension UIColor {
         UIColor(named: "MainColor")!
     }
     
-    static var buttonBorderColor: UIColor {
-        UIColor(named: "ButtonBorderColor")!
-    }
-    
     static var backgroundColor: UIColor {
         UIColor(named: "BackgroundColor")!
     }
