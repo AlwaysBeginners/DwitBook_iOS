@@ -16,6 +16,8 @@
 		440A010C28097AC400AB824D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A010B28097AC400AB824D /* Review.swift */; };
 		44335B5B280C4F56005ECB3C /* ReviewBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */; };
 		44335B5F280D85A0005ECB3C /* ShadowedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */; };
+		44565EAA283749DF00538F2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44565EA9283749DF00538F2B /* LoginViewController.swift */; };
+		44565EAC283749F300538F2B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44565EAB283749F300538F2B /* RegisterViewController.swift */; };
 		44883913282FB398005CBC05 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883912282FB398005CBC05 /* UIColorExtension.swift */; };
 		449A8D7B280FF57B00307E2A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449A8D7A280FF57B00307E2A /* StringExtension.swift */; };
 		44A9D6EE28055D6C0086C1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9D6ED28055D6C0086C1FE /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		440A010B28097AC400AB824D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		44335B5A280C4F56005ECB3C /* ReviewBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBlockView.swift; sourceTree = "<group>"; };
 		44335B5E280D85A0005ECB3C /* ShadowedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedImageView.swift; sourceTree = "<group>"; };
+		44565EA9283749DF00538F2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		44565EAB283749F300538F2B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		44883912282FB398005CBC05 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		449A8D7A280FF57B00307E2A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		44A9D6EA28055D6C0086C1FE /* DwitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +149,8 @@
 				44A9D6EF28055D6C0086C1FE /* SceneDelegate.swift */,
 				44A9D6F828055D6C0086C1FE /* LaunchScreen.storyboard */,
 				44A9D6F328055D6C0086C1FE /* Main.storyboard */,
+				44565EA9283749DF00538F2B /* LoginViewController.swift */,
+				44565EAB283749F300538F2B /* RegisterViewController.swift */,
 				44A9D6F628055D6C0086C1FE /* Assets.xcassets */,
 				44A9D6FB28055D6C0086C1FE /* Info.plist */,
 			);
@@ -390,9 +396,11 @@
 				440A010C28097AC400AB824D /* Review.swift in Sources */,
 				44883913282FB398005CBC05 /* UIColorExtension.swift in Sources */,
 				44A9D73E2806CB4F0086C1FE /* SearchResultCell.swift in Sources */,
+				44565EAA283749DF00538F2B /* LoginViewController.swift in Sources */,
 				44A9D6F028055D6C0086C1FE /* SceneDelegate.swift in Sources */,
 				44335B5B280C4F56005ECB3C /* ReviewBlockView.swift in Sources */,
 				44A9D7262806016C0086C1FE /* SuggestionCell.swift in Sources */,
+				44565EAC283749F300538F2B /* RegisterViewController.swift in Sources */,
 				440A00F828091A2200AB824D /* DateExtension.swift in Sources */,
 				44A9D7162805B1900086C1FE /* Book.swift in Sources */,
 				44BA89502827973400444F5A /* BookDetailViewController.swift in Sources */,
